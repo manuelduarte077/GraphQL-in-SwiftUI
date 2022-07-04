@@ -11,6 +11,17 @@
 		64F88BC32872CBC400C1008A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88BC22872CBC400C1008A /* ContentView.swift */; };
 		64F88BC52872CBC800C1008A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BC42872CBC800C1008A /* Assets.xcassets */; };
 		64F88BC82872CBC800C1008A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BC72872CBC800C1008A /* Preview Assets.xcassets */; };
+		64F88BD02872CD8400C1008A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BCF2872CD8400C1008A /* Apollo */; };
+		64F88BD22872D15000C1008A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BD12872D15000C1008A /* schema.json */; };
+		64F88BD62872D28000C1008A /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BD52872D28000C1008A /* Queries.graphql */; };
+		64F88BDA2872D4DD00C1008A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BD92872D4DD00C1008A /* Apollo */; };
+		64F88BDD2872D69F00C1008A /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BDC2872D69F00C1008A /* Apollo */; };
+		64F88BDF2872D69F00C1008A /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BDE2872D69F00C1008A /* ApolloCodegenLib */; };
+		64F88BE12872D69F00C1008A /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BE02872D69F00C1008A /* ApolloWebSocket */; };
+		64F88BE42872D6E500C1008A /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BE32872D6E500C1008A /* ApolloCodegenLib */; };
+		64F88BE62872D6E500C1008A /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 64F88BE52872D6E500C1008A /* ApolloWebSocket */; };
+		64F88BE82872D78A00C1008A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88BE72872D78A00C1008A /* API.swift */; };
+		64F88BEA2872D87F00C1008A /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88BE92872D87F00C1008A /* ApolloNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,10 @@
 		64F88BC22872CBC400C1008A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64F88BC42872CBC800C1008A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64F88BC72872CBC800C1008A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64F88BD12872D15000C1008A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		64F88BD52872D28000C1008A /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		64F88BE72872D78A00C1008A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		64F88BE92872D87F00C1008A /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F88BD02872CD8400C1008A /* Apollo in Frameworks */,
+				64F88BE42872D6E500C1008A /* ApolloCodegenLib in Frameworks */,
+				64F88BDD2872D69F00C1008A /* Apollo in Frameworks */,
+				64F88BE12872D69F00C1008A /* ApolloWebSocket in Frameworks */,
+				64F88BE62872D6E500C1008A /* ApolloWebSocket in Frameworks */,
+				64F88BDA2872D4DD00C1008A /* Apollo in Frameworks */,
+				64F88BDF2872D69F00C1008A /* ApolloCodegenLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +73,8 @@
 		64F88BBF2872CBC400C1008A /* GraphQLSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				64F88BD42872D26700C1008A /* GraphQL */,
+				64F88BD12872D15000C1008A /* schema.json */,
 				64F88BC02872CBC400C1008A /* GraphQLSwiftUIApp.swift */,
 				64F88BC22872CBC400C1008A /* ContentView.swift */,
 				64F88BC42872CBC800C1008A /* Assets.xcassets */,
@@ -67,6 +91,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		64F88BD42872D26700C1008A /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				64F88BE72872D78A00C1008A /* API.swift */,
+				64F88BD52872D28000C1008A /* Queries.graphql */,
+				64F88BE92872D87F00C1008A /* ApolloNetwork.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64F88BCB2872CBC800C1008A /* Build configuration list for PBXNativeTarget "GraphQLSwiftUI" */;
 			buildPhases = (
+				64F88BD72872D37B00C1008A /* Generate Apollo GraphQL API */,
 				64F88BB92872CBC400C1008A /* Sources */,
 				64F88BBA2872CBC400C1008A /* Frameworks */,
 				64F88BBB2872CBC400C1008A /* Resources */,
@@ -83,6 +118,15 @@
 			dependencies = (
 			);
 			name = GraphQLSwiftUI;
+			packageProductDependencies = (
+				64F88BCF2872CD8400C1008A /* Apollo */,
+				64F88BD92872D4DD00C1008A /* Apollo */,
+				64F88BDC2872D69F00C1008A /* Apollo */,
+				64F88BDE2872D69F00C1008A /* ApolloCodegenLib */,
+				64F88BE02872D69F00C1008A /* ApolloWebSocket */,
+				64F88BE32872D6E500C1008A /* ApolloCodegenLib */,
+				64F88BE52872D6E500C1008A /* ApolloWebSocket */,
+			);
 			productName = GraphQLSwiftUI;
 			productReference = 64F88BBD2872CBC400C1008A /* GraphQLSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,11 @@
 				Base,
 			);
 			mainGroup = 64F88BB42872CBC400C1008A;
+			packageReferences = (
+				64F88BCE2872CD8400C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				64F88BE22872D6E500C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 64F88BBE2872CBC400C1008A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,12 +174,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F88BD62872D28000C1008A /* Queries.graphql in Resources */,
 				64F88BC82872CBC800C1008A /* Preview Assets.xcassets in Resources */,
+				64F88BD22872D15000C1008A /* schema.json in Resources */,
 				64F88BC52872CBC800C1008A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64F88BD72872D37B00C1008A /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" ./GraphQL/API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64F88BB92872CBC400C1008A /* Sources */ = {
@@ -138,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64F88BC32872CBC400C1008A /* ContentView.swift in Sources */,
+				64F88BE82872D78A00C1008A /* API.swift in Sources */,
 				64F88BC12872CBC400C1008A /* GraphQLSwiftUIApp.swift in Sources */,
+				64F88BEA2872D87F00C1008A /* ApolloNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +413,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64F88BCE2872CD8400C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.9.5;
+			};
+		};
+		64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		64F88BE22872D6E500C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64F88BCF2872CD8400C1008A /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BCE2872CD8400C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		64F88BD92872D4DD00C1008A /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BCE2872CD8400C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		64F88BDC2872D69F00C1008A /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		64F88BDE2872D69F00C1008A /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+		64F88BE02872D69F00C1008A /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		64F88BE32872D6E500C1008A /* ApolloCodegenLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloCodegenLib;
+		};
+		64F88BE52872D6E500C1008A /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64F88BDB2872D69F00C1008A /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64F88BB52872CBC400C1008A /* Project object */;
 }
