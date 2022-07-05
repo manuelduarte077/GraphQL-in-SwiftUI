@@ -17,20 +17,23 @@ struct ContentView: View {
             VStack {
                 List(countries, id: \.code) { country in
                     
-                    HStack {
-                        
-                        Text(country.emoji)
-                            .font(.title)
-                        VStack(alignment: .leading) {
-                            Text(country.name)
-                                .font(.headline)
-                                .foregroundColor(.secondary)
-                            Text(country.capital ?? "Managua")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
+                    NavigationLink (destination: CountryDetailView(country: country), label: {
+                        HStack(alignment: .center) {
+                            
+                            Text(country.emoji)
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading) {
+                                Text(country.name)
+                                    .font(.system(size: 26, weight: .bold, design: .default))
+                                    .foregroundColor(.black)
+                                Text(country.capital ?? "Managua")
+                                    .font(.system(size: 16, weight: .bold, design: .default))
+                                    .foregroundColor(.gray)
+                            }
+                            
                         }
-                        
-                    }
+                    })
                 }
                 .listStyle(InsetGroupedListStyle())
                 
@@ -58,6 +61,7 @@ struct ContentView: View {
         
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

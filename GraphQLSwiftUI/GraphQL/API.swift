@@ -15,10 +15,6 @@ public final class GetAllCountriesQuery: GraphQLQuery {
         name
         capital
         emoji
-        languages {
-          __typename
-          name
-        }
       }
     }
     """
@@ -66,7 +62,6 @@ public final class GetAllCountriesQuery: GraphQLQuery {
           GraphQLField("name", type: .nonNull(.scalar(String.self))),
           GraphQLField("capital", type: .scalar(String.self)),
           GraphQLField("emoji", type: .nonNull(.scalar(String.self))),
-          GraphQLField("languages", type: .nonNull(.list(.nonNull(.object(Language.selections))))),
         ]
       }
 
@@ -76,8 +71,8 @@ public final class GetAllCountriesQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(code: GraphQLID, name: String, capital: String? = nil, emoji: String, languages: [Language]) {
-        self.init(unsafeResultMap: ["__typename": "Country", "code": code, "name": name, "capital": capital, "emoji": emoji, "languages": languages.map { (value: Language) -> ResultMap in value.resultMap }])
+      public init(code: GraphQLID, name: String, capital: String? = nil, emoji: String) {
+        self.init(unsafeResultMap: ["__typename": "Country", "code": code, "name": name, "capital": capital, "emoji": emoji])
       }
 
       public var __typename: String {
@@ -122,54 +117,6 @@ public final class GetAllCountriesQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "emoji")
-        }
-      }
-
-      public var languages: [Language] {
-        get {
-          return (resultMap["languages"] as! [ResultMap]).map { (value: ResultMap) -> Language in Language(unsafeResultMap: value) }
-        }
-        set {
-          resultMap.updateValue(newValue.map { (value: Language) -> ResultMap in value.resultMap }, forKey: "languages")
-        }
-      }
-
-      public struct Language: GraphQLSelectionSet {
-        public static let possibleTypes: [String] = ["Language"]
-
-        public static var selections: [GraphQLSelection] {
-          return [
-            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("name", type: .scalar(String.self)),
-          ]
-        }
-
-        public private(set) var resultMap: ResultMap
-
-        public init(unsafeResultMap: ResultMap) {
-          self.resultMap = unsafeResultMap
-        }
-
-        public init(name: String? = nil) {
-          self.init(unsafeResultMap: ["__typename": "Language", "name": name])
-        }
-
-        public var __typename: String {
-          get {
-            return resultMap["__typename"]! as! String
-          }
-          set {
-            resultMap.updateValue(newValue, forKey: "__typename")
-          }
-        }
-
-        public var name: String? {
-          get {
-            return resultMap["name"] as? String
-          }
-          set {
-            resultMap.updateValue(newValue, forKey: "name")
-          }
         }
       }
     }

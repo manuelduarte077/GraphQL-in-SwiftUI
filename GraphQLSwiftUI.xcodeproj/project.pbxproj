@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64D2FC172873FAF900C37157 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2FC162873FAF900C37157 /* CountryDetailView.swift */; };
 		64F88BC12872CBC400C1008A /* GraphQLSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88BC02872CBC400C1008A /* GraphQLSwiftUIApp.swift */; };
 		64F88BC32872CBC400C1008A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F88BC22872CBC400C1008A /* ContentView.swift */; };
 		64F88BC52872CBC800C1008A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64F88BC42872CBC800C1008A /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64D2FC162873FAF900C37157 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		64F88BBD2872CBC400C1008A /* GraphQLSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F88BC02872CBC400C1008A /* GraphQLSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLSwiftUIApp.swift; sourceTree = "<group>"; };
 		64F88BC22872CBC400C1008A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				64F88BD12872D15000C1008A /* schema.json */,
 				64F88BC02872CBC400C1008A /* GraphQLSwiftUIApp.swift */,
 				64F88BC22872CBC400C1008A /* ContentView.swift */,
+				64D2FC162873FAF900C37157 /* CountryDetailView.swift */,
 				64F88BC42872CBC800C1008A /* Assets.xcassets */,
 				64F88BC62872CBC800C1008A /* Preview Content */,
 			);
@@ -213,6 +216,7 @@
 				64F88BE82872D78A00C1008A /* API.swift in Sources */,
 				64F88BC12872CBC400C1008A /* GraphQLSwiftUIApp.swift in Sources */,
 				64F88BEA2872D87F00C1008A /* ApolloNetwork.swift in Sources */,
+				64D2FC172873FAF900C37157 /* CountryDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
