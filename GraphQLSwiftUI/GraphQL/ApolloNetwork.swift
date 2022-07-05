@@ -16,6 +16,4 @@ class Network {
     
     lazy var apollo = ApolloClient(url: URL(string: "https://countries.trevorblades.com/")!)
     
-    
-    
 }

@@ -16,9 +16,26 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 List(countries, id: \.code) { country in
-                    Text(country.name)
+                    
+                    HStack {
+                        
+                        Text(country.emoji)
+                            .font(.title)
+                        VStack(alignment: .leading) {
+                            Text(country.name)
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                            Text(country.capital ?? "Managua")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                    }
                 }
+                .listStyle(InsetGroupedListStyle())
+                
             }
+            
             .onAppear(perform: {
                 Network.shared.apollo.fetch(query: GetAllCountriesQuery()) { result in
                     
