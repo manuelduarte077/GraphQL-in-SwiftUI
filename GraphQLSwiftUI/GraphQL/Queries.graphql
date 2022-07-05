@@ -1,0 +1,26 @@
+
+query GetAllCountries {
+  countries {
+    code
+    name
+    capital
+    emoji
+  }
+}
+
+
+query GetAllCountriesDetail($code: ID!) {
+  country(code: $code) {
+    name
+    emoji
+    languages {
+      name
+    }
+    continent {
+      name
+    }
+    states {
+      name
+    }
+  }
+}
